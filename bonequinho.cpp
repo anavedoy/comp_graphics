@@ -1,4 +1,4 @@
-#include <GL/glut.h>
+#include <glut>
   
 // Rotation
 static GLfloat yRot = 0.0f;
