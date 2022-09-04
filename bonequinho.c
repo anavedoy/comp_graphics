@@ -1,16 +1,19 @@
 #include <GL/glut.h>
   
 // Rotation
+
 static GLfloat yRot = 0.0f;
 
+
+
 // Change viewing volume and viewport.  Called when window is resized  
-void ChangeSize(int w, int h)  
-    {  
+
+void ChangeSize(int w, int h){  
+    
     GLfloat fAspect;  
   
     // Prevent a divide by zero  
-    if(h == 0)  
-        h = 1;  
+    if(h == 0) h = 1;  
   
     // Set Viewport to window dimensions  
     glViewport(0, 0, w, h);  
@@ -26,10 +29,13 @@ void ChangeSize(int w, int h)
   
     glMatrixMode(GL_MODELVIEW);  
     glLoadIdentity();  
-    }  
+}  
   
+
   
-// This function does any needed initialization on the rendering context.  Here it sets up and initializes the lighting for the scene.  
+// This function does any needed initialization on the rendering context.  
+// Here it sets up and initializes the lighting for the scene.  
+
 void SetupRC(){  
 
     // Light values and coordinates  
@@ -65,13 +71,11 @@ void SetupRC(){
 // Respond to arrow keys (rotate snowman)
 void SpecialKeys(int key, int x, int y){  
 
-    if(key == GLUT_KEY_LEFT)  
-        yRot -= 5.0f;  
+    if(key == GLUT_KEY_LEFT) yRot -= 5.0f;  
   
-    if(key == GLUT_KEY_RIGHT)  
-        yRot += 5.0f;  
+    if(key == GLUT_KEY_RIGHT) yRot += 5.0f;  
                   
-    yRot = (GLfloat)((const int)yRot % 360);  
+    yRot = (GLfloat)((const int) yRot % 360);  
   
     // Refresh the Window  
     glutPostRedisplay();  
@@ -121,8 +125,21 @@ void RenderScene(void){
 		gluCylinder(pObj, 0.04f, 0.0f, 0.3f, 26, 13);  
 	glPopMatrix();  
 
+
+
+
 	// Eyes (black)
-// glColor, glPushMatrix,...
+
+    glColor3f(0.0f, 0.0f, 0.0f); 
+
+
+	glPushMatrix();
+        
+		glTranslatef(0.0f, 1.0f, 0.05f);
+		gluSphere(pObj, 0.1f, 40, 13);  
+
+	glPopMatrix(); 
+    // glColor, glPushMatrix,...
 
 	// Hat
 
