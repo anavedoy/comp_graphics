@@ -2,8 +2,8 @@
   
 // Rotation
 
-static GLfloat yRot = 0.0f;
-
+static GLfloat yRot = 40.0f;
+static GLfloat xRot = 50.0f;
 
 
 // Change viewing volume and viewport.  Called when window is resized  
@@ -76,6 +76,12 @@ void SpecialKeys(int key, int x, int y){
     if(key == GLUT_KEY_RIGHT) yRot += 5.0f;  
                   
     yRot = (GLfloat)((const int) yRot % 360);  
+
+    if(key == GLUT_KEY_LEFT) xRot -= 5.0f;  
+  
+    if(key == GLUT_KEY_RIGHT) xRot += 5.0f;  
+                  
+    xRot = (GLfloat)((const int) xRot % 360);  
   
     // Refresh the Window  
     glutPostRedisplay();  
@@ -103,14 +109,20 @@ void RenderScene(void){
 	// white
 	glColor3f(1.0f, 1.0f, 1.0f);  
 
-	// Main Body  
-//	gluSphere();  // Bottom
+	// Main Body 
+
+
+    glPushMatrix(); // save transform matrix state
+		glTranslatef(0.0f, 0.50f, 0.0f);
+		gluSphere(pObj, 0.40f, 26, 13);
+	glPopMatrix(); // restore transform matrix state 
+    //	gluSphere();  // Bottom
 
 	// Mid section
-//	glPushMatrix();
-//		glTranslatef(); 
-//		gluSphere();
-//	glPopMatrix();
+    //	glPushMatrix();
+    //		glTransslatef(); 
+    //		gluSphere();
+    //	glPopMatrix();
 
 	// Head
 	glPushMatrix(); // save transform matrix state
@@ -129,16 +141,29 @@ void RenderScene(void){
 
 
 	// Eyes (black)
+    //glTranslatef(0.0f, 1.0f, 0.0f);
+    glColor3f(0.0f, 0.0f, 0.0f); 
+
+
+	glPushMatrix();
+        
+		glTranslatef(0.09f, 1.06f, 0.20f);
+		gluSphere(pObj, 0.05f, 26, 13);  
+
+	glPopMatrix(); 
+
+
 
     glColor3f(0.0f, 0.0f, 0.0f); 
 
 
 	glPushMatrix();
         
-		glTranslatef(0.0f, 1.0f, 0.05f);
-		gluSphere(pObj, 0.1f, 40, 13);  
+		glTranslatef(-0.09f, 1.06f, 0.20);
+		gluSphere(pObj, 0.05f, 26, 13);  
 
 	glPopMatrix(); 
+
     // glColor, glPushMatrix,...
 
 	// Hat
