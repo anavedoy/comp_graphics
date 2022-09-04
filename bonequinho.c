@@ -112,17 +112,18 @@ void RenderScene(void){
 	// Main Body 
 
 
-    glPushMatrix(); // save transform matrix state
-		glTranslatef(0.0f, 0.50f, 0.0f);
+    glPushMatrix(); 
+		glTranslatef(0.0f, 0.10f, 0.0f);
 		gluSphere(pObj, 0.40f, 26, 13);
-	glPopMatrix(); // restore transform matrix state 
+	glPopMatrix(); 
+    
     //	gluSphere();  // Bottom
 
 	// Mid section
-    //	glPushMatrix();
-    //		glTransslatef(); 
-    //		gluSphere();
-    //	glPopMatrix();
+    glPushMatrix(); 
+		glTranslatef(0.0f, 0.60f, 0.0f);
+		gluSphere(pObj, 0.28f, 26, 13);
+	glPopMatrix(); 
 
 	// Head
 	glPushMatrix(); // save transform matrix state
