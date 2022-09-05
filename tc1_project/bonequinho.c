@@ -76,8 +76,6 @@ void SpecialKeys(int key, int x, int y){
                   
     yRot = (GLfloat)((const int) yRot % 360);  
 
-    
-  
     // Refresh the Window  
     glutPostRedisplay();  
 }
@@ -104,23 +102,64 @@ void RenderScene(void){
 	// white
 	glColor3f(1.0f, 1.0f, 1.0f);  
 
-	// Main Body 
-
-
+	// Main Body
     glPushMatrix(); 
 		glTranslatef(0.0f, 0.4f, 0.0f);
 		gluSphere(pObj, 0.40f, 26, 13);
 	glPopMatrix(); 
 
-    //	gluSphere();  // Bottom
 
 	// Mid section
     glPushMatrix(); 
+
 		glTranslatef(0.0f, 0.90f, 0.0f);
 		gluSphere(pObj, 0.28f, 26, 13);
+
 	glPopMatrix(); 
 
-	// Head
+   
+	// bottons
+    glColor3f(0.0f, 0.0f, 0.0f);
+    
+    // // mid
+    glPushMatrix(); 
+		glTranslatef(0.0f, 0.984f, 0.27f);
+		gluSphere(pObj, 0.033f, 26, 13);
+	glPopMatrix();
+     
+    glPushMatrix(); 
+		glTranslatef(0.0f, 0.85f, 0.27f);
+		gluSphere(pObj, 0.033f, 26, 13);
+	glPopMatrix(); 
+
+    // // main  
+    glPushMatrix(); 
+		glTranslatef(0.0f, 0.650f, 0.32f);
+		gluSphere(pObj, 0.033f, 26, 13);
+	glPopMatrix(); 
+
+    glPushMatrix(); 
+		glTranslatef(0.0f, 0.516, 0.393f);
+		gluSphere(pObj, 0.033f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix(); 
+		glTranslatef(0.0f, 0.382, 0.41f);
+		gluSphere(pObj, 0.033f, 26, 13);
+	glPopMatrix();
+
+
+    //scarf :3
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 1.15, 0.0f);
+        glRotatef(90,1.0,0,0);
+		gluCylinder(pObj, 0.24f, 0.24f, 0.10f, 26, 13);  
+	glPopMatrix();  
+    
+    
+    // Head
+    glColor3f(1.0f, 1.0f, 1.0f); 	
 	glPushMatrix(); // save transform matrix state
 		glTranslatef(0.0f, 1.3f, 0.0f);
 		gluSphere(pObj, 0.24f, 26, 13);
@@ -134,38 +173,50 @@ void RenderScene(void){
 	glPopMatrix();  
 
 
-
-
 	// Eyes (black)
-    //glTranslatef(0.0f, 1.0f, 0.0f);
     glColor3f(0.0f, 0.0f, 0.0f); 
-
-
 	glPushMatrix();
         
 		glTranslatef(0.09f, 1.36f, 0.20f);
-		gluSphere(pObj, 0.05f, 26, 13);  
+		gluSphere(pObj, 0.03f, 26, 13);  
 
 	glPopMatrix(); 
-
 
 
     glColor3f(0.0f, 0.0f, 0.0f); 
-
-
 	glPushMatrix();
         
 		glTranslatef(-0.09f, 1.36f, 0.20);
-		gluSphere(pObj, 0.05f, 26, 13);  
+		gluSphere(pObj, 0.03f, 26, 13);  
 
 	glPopMatrix(); 
 
-    // glColor, glPushMatrix,...
-
 	// Hat
 
+    glColor3f(0.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 1.53, 0.0f);
+        glRotatef(-90,1.0,0,0);
+		gluCylinder(pObj, 0.15f, 0.15f, 0.30f, 26, 13);  
+	glPopMatrix();
+
 	// Hat brim
-          
+
+    glColor3f(0.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 1.53, 0.0f);
+        glRotatef(90,1.0,0,0);
+		gluCylinder(pObj, 0.21f, 0.21f, 0.10f, 26, 13);  
+	glPopMatrix();
+
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 1.64, 0.0f);
+        glRotatef(90,1.0,0,0);
+		gluCylinder(pObj, 0.151f, 0.151f, 0.10f, 26, 13);  
+	glPopMatrix();
+
+
     // Restore the matrix state  
     glPopMatrix();  
   
