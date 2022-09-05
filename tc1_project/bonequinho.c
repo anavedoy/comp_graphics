@@ -155,14 +155,14 @@ void RenderScene(void){
     //glColor3f(0.2f, 0.0f, 0.0f); 
 
  	glPushMatrix();
-		glTranslatef(0.0012f, 1.2, 0.30f);
+		glTranslatef(0.0012f, 1.2, 0.2550f);
         glRotatef(90,0.0,1,0);
         glRotatef(210,1.0,0,0);
 		gluCylinder(pObj, 0.006f, 0.006f, 0.05f, 26, 13);  
 	glPopMatrix(); 
 
     glPushMatrix();
-		glTranslatef(0.044f, 1.225, 0.30f);
+		glTranslatef(0.044f, 1.225, 0.2550f);
         glRotatef(-90,0.0,1,0);
         glRotatef(30,1.0,0,0);
 		gluCylinder(pObj, 0.006f, 0.006f, 0.05f, 26, 13);  
