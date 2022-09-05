@@ -108,7 +108,7 @@ void RenderScene(void){
 	glPopMatrix(); // restore transform matrix state
 
 	// nose (orange)
-	glColor3f(1.0f, 0.4f, 0.51f);  
+	glColor3f(1.0f, 0.20f, 0.0f);  
 	glPushMatrix();
 		glTranslatef(0.0f, 1.3f, 0.2f);
 		gluCylinder(pObj, 0.04f, 0.0f, 0.3f, 26, 13);  
