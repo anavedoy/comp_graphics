@@ -118,7 +118,7 @@ void RenderScene(void){
 	glColor3f(1.0f, 0.20f, 0.0f);  
 	glPushMatrix();
 		glTranslatef(0.0f, 1.3f, 0.2f);
-		gluCylinder(pObj, 0.04f, 0.0f, 0.3f, 26, 13);  
+		gluCylinder(pObj, 0.04f, 0.0f, 0.2f, 26, 13);  
 	glPopMatrix();  
 
 
@@ -177,7 +177,7 @@ void RenderScene(void){
 
 
 	// hat (black)
-    glColor3f(0.0f, 0.0f, 0.0f); 
+    glColor3ub(0.0f, 0.0f, 0.0f); 
 
     // // crown     
 	glPushMatrix();
@@ -260,6 +260,18 @@ void RenderScene(void){
         glRotatef(90,1.0,0,0);
 		gluCylinder(pObj, 0.24f, 0.24f, 0.10f, 26, 13);  
 	glPopMatrix();  
+
+    int i;
+
+    for (i=0;i<5;i++){
+
+        glPushMatrix();
+		    glTranslatef(-0.10f, 1.050, 0.18f);
+            glRotatef(60,1.0,0,0);
+		    gluCylinder(pObj, 0.04f, 0.04f, 0.15f, 26, 13);  
+	    glPopMatrix(); 
+
+    }
     
 
     // arms (brown)
