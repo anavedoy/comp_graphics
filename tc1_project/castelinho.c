@@ -108,14 +108,17 @@ void RenderScene(void){
 
     
     // head (white)
-    glColor3f(1.0f, 1.0f, 1.0f); 	
+
+    glColor3f(1.0f, 1.0f, 1.0f);
+
 	glPushMatrix(); // save transform matrix state
-		glTranslatef(0.0f, 1.3f, 0.0f);
-		gluSphere(pObj, 0.24f, 26, 13);
+        glTranslatef(0.0f, 1.3f, 0.0f);
+        GLfloat x1 = 0.1;
+        GLfloat y1 = 0.2; 
+        GLfloat x2 = 0.3; 
+        GLfloat y2 = 0.3;
+	    glRectf(x1,y1, x2, y2);
 	glPopMatrix(); // restore transform matrix state
-
-
-	
 
 
     // Restore the matrix state  
