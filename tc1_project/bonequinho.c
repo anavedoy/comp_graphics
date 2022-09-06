@@ -3,6 +3,7 @@
 // Rotation
 
 static GLfloat yRot = 0.0f;
+static GLfloat xRot = 0.0f;
 
 
 // Change viewing volume and viewport.  Called when window is resized  
@@ -72,9 +73,14 @@ void SpecialKeys(int key, int x, int y){
 
     if(key == GLUT_KEY_LEFT) yRot -= 5.0f;  
   
-    if(key == GLUT_KEY_RIGHT) yRot += 5.0f;  
-                  
-    yRot = (GLfloat)((const int) yRot % 360);  
+    if(key == GLUT_KEY_RIGHT) yRot += 5.0f;    
+
+    if(key == GLUT_KEY_UP) xRot += 5.0f;  
+  
+    if(key == GLUT_KEY_DOWN) xRot -= 5.0f;     
+
+    xRot = (GLfloat)((const int) xRot % 360);
+    yRot = (GLfloat)((const int) yRot % 360); 
 
     // Refresh the Window  
     glutPostRedisplay();  
@@ -94,6 +100,7 @@ void RenderScene(void){
 	// Move object back and do in place rotation  
 	glTranslatef(0.0f, -1.0f, -5.0f);  
 	glRotatef(yRot, 0.0f, 1.0f, 0.0f);  
+    glRotatef(xRot, 1.0f, 0.0f, 0.0f);
 
 	// Draw something  
 	pObj = gluNewQuadric();  
