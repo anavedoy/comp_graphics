@@ -183,14 +183,14 @@ void RenderScene(void){
 	glPushMatrix();
 		glTranslatef(0.0f, 1.53, 0.0f);
         glRotatef(-90,1.0,0,0);
-		gluCylinder(pObj, 0.15f, 0.15f, 0.30f, 26, 13);  
+		glutSolidCylinder(0.15f, 0.30f, 26, 13);  
 	glPopMatrix();
 
 	// // brim   
 	glPushMatrix();
 		glTranslatef(0.0f, 1.53, 0.0f);
         glRotatef(90,1.0,0,0);
-		gluCylinder(pObj, 0.21f, 0.21f, 0.10f, 26, 13);  
+		glutSolidCylinder(0.21f, 0.10f, 26, 13);  
 	glPopMatrix();
     
     // // band (red)
@@ -198,7 +198,7 @@ void RenderScene(void){
 	glPushMatrix();
 		glTranslatef(0.0f, 1.64, 0.0f);
         glRotatef(90,1.0,0,0);
-		gluCylinder(pObj, 0.151f, 0.151f, 0.10f, 26, 13);  
+		glutSolidCylinder(0.151f, 0.10f, 26, 13);  
 	glPopMatrix();
 
 
@@ -258,20 +258,15 @@ void RenderScene(void){
 	glPushMatrix();
 		glTranslatef(0.0f, 1.15, 0.0f);
         glRotatef(90,1.0,0,0);
-		gluCylinder(pObj, 0.24f, 0.24f, 0.10f, 26, 13);  
+		glutSolidCylinder(0.24f, 0.10f, 26, 13);  
 	glPopMatrix();  
 
-    int i;
+    glPushMatrix();
+        glTranslatef(-0.10f, 1.050, 0.18f);
+        glRotatef(60,1.0,0,0);
+        glutSolidCylinder(0.04f, 0.15f, 26, 13);  
+    glPopMatrix(); 
 
-    for (i=0;i<5;i++){
-
-        glPushMatrix();
-		    glTranslatef(-0.10f, 1.050, 0.18f);
-            glRotatef(60,1.0,0,0);
-		    gluCylinder(pObj, 0.04f, 0.04f, 0.15f, 26, 13);  
-	    glPopMatrix(); 
-
-    }
     
 
     // arms (brown)
