@@ -169,8 +169,9 @@ void RenderScene(void){
             glutSolidCylinder(0.28f, 0.9f, 4, 1);  
         glPopMatrix();
 
-    // torre portao quadrado
+    // torre entrada quadrada
 
+    
     glPushMatrix();
             glTranslatef(0.0f, 0.0, 1.2f);
             glRotatef(-90,1.0, 0,  0);
@@ -178,15 +179,34 @@ void RenderScene(void){
             glutSolidCylinder(0.28f, 0.4f, 4, 1);  
     glPopMatrix();
 
+    
+    // portao torre entrada
+    glColor3f(0.4f, 0.20f, 0.0f); 
+    glPushMatrix();
+            glTranslatef(0.0f, 0.0, 1.33f);
+            glRotatef(-90,1.0, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.13f, 0.3f, 4, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(0.0f, 0.0, 1.06f);
+            glRotatef(-90,1.0, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.13f, 0.3f, 4, 1);  
+    glPopMatrix();
+    glColor3f(0.90f, 0.5f, 0.3f); 
+
     //telhas torres:
-    glColor3f(0.9f, 0.1f, 0.1f); 
+    
+    glColor3f(0.90f, 0.5f, 0.3f); 
     glPushMatrix();
             glTranslatef(1.0f, 1.015, -1.2f);
             glRotatef(90,0, 0,  1);
             glRotatef(90,1, 0,  0);
             glutSolidCylinder(0.23f, 0.399f, 3, 1);  
     glPopMatrix();
-    
+    glColor3f(0.9f, 0.1f, 0.1f); 
     float lugar_telha_torre = -1.2f;
     for(int i = 0;i<2;i++){
         glPushMatrix();
