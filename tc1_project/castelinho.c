@@ -196,7 +196,7 @@ void RenderScene(void){
             glutSolidCylinder(0.13f, 0.2f, 4, 1);  
     glPopMatrix();
 
-    
+
     //janelas
     float aux = -0.90f;
     glColor3f(0.2f, 0.0f, 0.0f); 
@@ -303,6 +303,18 @@ void RenderScene(void){
                     glutSolidCylinder(0.02f, 0.05f, 4, 1);  
                     outro_aux=outro_aux+0.05;
                     
+        glPopMatrix();
+    }
+    
+    int ang = 45;
+    for(int i = 0; i<25; i++){
+        glPushMatrix();
+                    glTranslatef(-1.20, 0.65, 1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
         glPopMatrix();
     }
     glColor3f(0.90f, 0.5f, 0.3f); 
