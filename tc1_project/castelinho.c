@@ -107,19 +107,91 @@ void RenderScene(void){
 	gluQuadricNormals(pObj, GLU_SMOOTH);  
 
     
-    // head (white)
+    // muralhas
 
     glColor3f(1.0f, 1.0f, 1.0f);
+    
+    
+    glColor3f(1.0f, 0.0f, 0.20f);
+    glColor3f(0.9f, 0.14f, 0.2f); 
+    glPushMatrix();
+            glTranslatef(-1.05, 0.14, 1.3f);
+            glRotatef(90,0, 1,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.2f, 2.1f, 4, 1);  
+    glPopMatrix();
 
-	glPushMatrix(); // save transform matrix state
-        glTranslatef(0.0f, 1.3f, 0.0f);
-        GLfloat x1 = 0.1;
-        GLfloat y1 = 0.2; 
-        GLfloat x2 = 0.3; 
-        GLfloat y2 = 0.3;
-	    glRectf(x1,y1, x2, y2);
-	glPopMatrix(); // restore transform matrix state
+    glPushMatrix();
+            glTranslatef(-1.2, 0.14, 1.3f);
+            glRotatef(180,0, 1,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.2f, 2.4f, 4, 1);  
+    glPopMatrix();
 
+    glPushMatrix();
+            glTranslatef(-1.05, 0.14, -1.3f);
+            glRotatef(90,0, 1,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.2f, 2.1f, 4, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(1.2, 0.14, -1.3f);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.2f, 2.4f, 4, 1);  
+    glPopMatrix();
+
+    
+
+    //torres
+    glColor3f(0.9f, 0.14f, 0.2f); 
+	glPushMatrix();
+		glTranslatef(-1.2f, 0.0, 1.2f);
+        glRotatef(-90,1.0,0,0);
+		glutSolidCylinder(0.25f, 0.7f, 26, 13);  
+	glPopMatrix();  
+ 
+	glPushMatrix();
+		glTranslatef(1.2f, 0.0, 1.2f);
+        glRotatef(-90,1.0,0,0);
+		glutSolidCylinder(0.25f, 0.7f, 26, 13);  
+	glPopMatrix(); 
+	glPushMatrix();
+		glTranslatef(-1.2f, 0.0, -1.2f);
+        glRotatef(-90,1.0,0,0);
+		glutSolidCylinder(0.25f, 0.7f, 26, 13);  
+	glPopMatrix(); 
+
+     glColor3f(1.0f, 0.0f, 0.20f);
+    // // torre quadrada
+    glColor3f(1.0f, 0.0f, 0.20f);
+    glPushMatrix();
+            glTranslatef(1.2f, 0.0, -1.3f);
+            glRotatef(-90,1.0, 0,  0);
+            glRotatef(45,0, 0,  1);
+
+            glutSolidCylinder(0.28f, 0.9f, 4, 1);  
+        glPopMatrix();
+    //telhas torres:
+    float lugar_telha_torre = -1.2f;
+    for(int i = 0;i<2;i++){
+        glColor3f(0.5f, 0.1f, 0.0f); 
+        glPushMatrix();
+            glTranslatef(lugar_telha_torre, 0.7f, 1.2f);
+            glRotatef(-90,1.0,0,0);
+            gluCylinder(pObj, 0.27f, 0.0f, 0.6f, 26, 13);  
+        glPopMatrix(); 
+        lugar_telha_torre = lugar_telha_torre+2.4;
+    }
+    for(int i = 0;i<2;i++){
+        glColor3f(0.5f, 0.1f, 0.0f); 
+        glPushMatrix();
+            glTranslatef(-1.2, 0.7f, -1.2);
+            glRotatef(-90,1.0,0,0);
+            gluCylinder(pObj, 0.27f, 0.0f, 0.6f, 26, 13);  
+        glPopMatrix(); 
+    }
+   
 
     // Restore the matrix state  
     glPopMatrix();  
