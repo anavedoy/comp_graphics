@@ -186,15 +186,100 @@ void RenderScene(void){
             glTranslatef(0.0f, 0.0, 1.33f);
             glRotatef(-90,1.0, 0,  0);
             glRotatef(45,0, 0,  1);
-            glutSolidCylinder(0.13f, 0.3f, 4, 1);  
+            glutSolidCylinder(0.13f, 0.2f, 4, 1);  
     glPopMatrix();
 
     glPushMatrix();
             glTranslatef(0.0f, 0.0, 1.06f);
             glRotatef(-90,1.0, 0,  0);
             glRotatef(45,0, 0,  1);
-            glutSolidCylinder(0.13f, 0.3f, 4, 1);  
+            glutSolidCylinder(0.13f, 0.2f, 4, 1);  
     glPopMatrix();
+
+    float aux = -0.90f;
+    glColor3f(0.2f, 0.0f, 0.0f); 
+    for (int i=0;i<7;i++){
+        glPushMatrix();
+                glTranslatef(aux, 0.2, 1.3f);
+                glRotatef(0,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        glPushMatrix();
+                glTranslatef(aux, 0.2, 1.04f);
+                glRotatef(0,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        aux = aux+0.1;
+    }
+    aux = 0.27;
+    for (int i=0;i<7;i++){
+        glPushMatrix();
+                glTranslatef(aux, 0.2, 1.3f);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        glPushMatrix();
+                glTranslatef(aux, 0.2, 1.04f);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        aux = aux+0.1;
+    }
+
+    aux = -0.90f;
+    for (int i=0;i<19;i++){
+        glPushMatrix();
+                glTranslatef(aux, 0.2, 1.3f-2.4f);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        glPushMatrix();
+                glTranslatef(aux, 0.2, 1.04f-2.4f);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        aux = aux+0.1;
+    }
+
+    aux = -0.9f;
+    for (int i=0;i<19;i++){
+        glPushMatrix();
+                glTranslatef(-1.329f, 0.2, aux);
+                glRotatef(-90,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        glPushMatrix();
+                glTranslatef(-1.06f, 0.2, aux);
+                glRotatef(-90,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+
+        glPushMatrix();
+                glTranslatef(-1.329f+2.4f, 0.2, aux);
+                glRotatef(-90,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        glPushMatrix();
+                glTranslatef(-1.06f+2.4f, 0.2, aux);
+                glRotatef(-90,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        aux = aux+0.1;
+    }
+
+    glPushMatrix();
+                glTranslatef(1.39f, 0.84, -1.2f);
+                glRotatef(-90,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+    glPopMatrix();
+
     glColor3f(0.90f, 0.5f, 0.3f); 
 
     //telhas torres:
