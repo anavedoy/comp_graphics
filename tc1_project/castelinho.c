@@ -115,21 +115,21 @@ void RenderScene(void){
     glColor3f(1.0f, 0.0f, 0.20f);
     glColor3f(0.90f, 0.5f, 0.3f); 
     glPushMatrix();
-            glTranslatef(-1.05, 0.14, 1.3f);
+            glTranslatef(-1.05, 0.14, 1.2f);
             glRotatef(90,0, 1,  0);
             glRotatef(45,0, 0,  1);
             gluCylinder(pObj, 0.2f, 0.2f, 2.1f, 4, 1);    
     glPopMatrix();
 
     glPushMatrix();
-            glTranslatef(-1.2, 0.14, 1.3f);
+            glTranslatef(-1.2, 0.14, 1.2f);
             glRotatef(180,0, 1,  0);
             glRotatef(45,0, 0,  1);
             glutSolidCylinder(0.2f, 2.4f, 4, 1);  
     glPopMatrix();
 
     glPushMatrix();
-            glTranslatef(-1.05, 0.14, -1.3f);
+            glTranslatef(-1.05, 0.14, -1.2f);
             glRotatef(90,0, 1,  0);
             glRotatef(45,0, 0,  1);
             glutSolidCylinder(0.2f, 2.1f, 4, 1);  
@@ -163,7 +163,7 @@ void RenderScene(void){
 
     // // torre quadrada
     glPushMatrix();
-            glTranslatef(1.2f, 0.0, -1.3f);
+            glTranslatef(1.2f, 0.0, -1.2f);
             glRotatef(-90,1.0, 0,  0);
             glRotatef(45,0, 0,  1);
 
