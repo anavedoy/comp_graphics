@@ -195,6 +195,8 @@ void RenderScene(void){
             glRotatef(45,0, 0,  1);
             glutSolidCylinder(0.13f, 0.2f, 4, 1);  
     glPopMatrix();
+
+    
     //janelas
     float aux = -0.90f;
     glColor3f(0.2f, 0.0f, 0.0f); 
@@ -282,8 +284,18 @@ void RenderScene(void){
                     glRotatef(-90,1.0, 0,  0);
                     glRotatef(45,0, 0,  1);
                     glutSolidCylinder(0.02f, 0.05f, 4, 1);  
-                    aux = aux-0.05;
+                    
         glPopMatrix();
+        glPushMatrix();
+                    glTranslatef(1.39f-0.385, 0.84, aux);
+                    glRotatef(-90,1, 0,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+                    
+        glPopMatrix();
+        aux = aux-0.05;
+
+
         glPushMatrix();
                     glTranslatef(outro_aux, 0.84, -1.0);
                     glRotatef(270,1.0, 0,  0);
@@ -304,7 +316,15 @@ void RenderScene(void){
             glRotatef(90,1, 0,  0);
             glutSolidCylinder(0.23f, 0.399f, 3, 1);  
     glPopMatrix();
+
     glColor3f(0.9f, 0.1f, 0.1f); 
+    glPushMatrix();
+            glTranslatef(1.05f, 1.02, -1.2f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glutSolidCylinder(0.231f, 0.32f, 3, 1);  
+    glPopMatrix();
+
     float lugar_telha_torre = -1.2f;
     for(int i = 0;i<2;i++){
         glPushMatrix();
