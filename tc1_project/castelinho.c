@@ -195,7 +195,7 @@ void RenderScene(void){
             glRotatef(45,0, 0,  1);
             glutSolidCylinder(0.13f, 0.2f, 4, 1);  
     glPopMatrix();
-
+    //janelas
     float aux = -0.90f;
     glColor3f(0.2f, 0.0f, 0.0f); 
     for (int i=0;i<7;i++){
@@ -227,6 +227,7 @@ void RenderScene(void){
         glPopMatrix();
         aux = aux+0.1;
     }
+
 
     aux = -0.90f;
     for (int i=0;i<19;i++){
@@ -273,13 +274,25 @@ void RenderScene(void){
         aux = aux+0.1;
     }
 
-    glPushMatrix();
-                glTranslatef(1.39f, 0.84, -1.2f);
-                glRotatef(-90,1.0, 0,  0);
-                glRotatef(45,0, 0,  1);
-                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
-    glPopMatrix();
-
+    aux = -1.15;
+    float outro_aux = 1.15;
+    for(int i=0;i<3;i++){
+        glPushMatrix();
+                    glTranslatef(1.39f, 0.84, aux);
+                    glRotatef(-90,1.0, 0,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+                    aux = aux-0.05;
+        glPopMatrix();
+        glPushMatrix();
+                    glTranslatef(outro_aux, 0.84, -1.0);
+                    glRotatef(270,1.0, 0,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+                    outro_aux=outro_aux+0.05;
+                    
+        glPopMatrix();
+    }
     glColor3f(0.90f, 0.5f, 0.3f); 
 
     //telhas torres:
