@@ -296,81 +296,67 @@ void RenderScene(void){
  	glPushMatrix();
 		glTranslatef(0.20f, 0.98, 0.1f);
         glRotatef(90,0.0,1,0);
-        glRotatef(30,1.0,0,0);
-		gluCylinder(pObj, 0.02f, 0.02f, 0.25f, 26, 13);  
-	glPopMatrix(); 
-
-    glPushMatrix();
-		glTranslatef(0.41f, 0.86, 0.1f);
-        glRotatef(90,0.0,1,0);
         glRotatef(70,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.02f, 0.25f, 26, 13);  
-	glPopMatrix(); 
 
+		glTranslatef(0.0f, 0.0, 0.24f);
+        glRotatef(0,0.0,1,0);
+        glRotatef(-75,1.0,0,0);
+		gluCylinder(pObj, 0.02f, 0.02f, 0.25f, 26, 13);  
+	
+
+    // // left hands
+
+		glTranslatef(0.0f, 0.0f, 0.26f);
+        glRotatef(45,0,1,0);
+        glRotatef(-90,1,0,0);
+		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
+
+		glTranslatef(0.0f, 0.0f, 0.0f);
+        glRotatef(90,0.0,1,0);
+        glRotatef(135,1.0,0,0);
+		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
+
+		glTranslatef(0.0f, 0.0f, 0.0f);
+        glRotatef(90,0.0,1,0);
+        glRotatef(20,1.0,0,0);
+		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
+	glPopMatrix();
 
     // right arm (brown)
     glColor3f(0.0f, 0.0f, 0.0f);
     glPushMatrix();
 		glTranslatef(-0.20f, 0.98, 0.1f);
         glRotatef(-90,0.0,1,0);
-        glRotatef(30,1.0,0,0);
+        glRotatef(70,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.02f, 0.25f, 26, 13);  
-	/*glPopMatrix(); 
 
-    glPushMatrix();*/
 		glTranslatef(0.0f, 0.0f, 0.25f);
         glRotatef(-80,1,0,0);
         //glRotatef(-45,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.02f, 0.25f, 26, 13);  
-	glPopMatrix(); 
+
 
     // hands (still brown)
        
 
     // // right hands
-	glPushMatrix();
-		glTranslatef(-0.579f, 1.0357f, 0.1f);
-        glRotatef(-90,0.0,1,0);
-        glRotatef(-45,1.0,0,0);
-		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
-	/*glPopMatrix();
 
-    glPushMatrix();*/
+		glTranslatef(0.0f, 0.0f, 0.25f);
+		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
+
 		glTranslatef(0.0f, 0.0, 0.0f);
         glRotatef(-90,0.0,1,0);
         glRotatef(-120,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
-	/*glPopMatrix();
 
-    glPushMatrix();*/
 		glTranslatef(0.0, 0.0f, 0.0f);
         glRotatef(155,0.0,1,0);
         glRotatef(-40,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
 	glPopMatrix();
 
-    // // left hands
-
-    glPushMatrix();
-		glTranslatef(0.495f, 0.63f, 0.1f);
-        glRotatef(90,0.0,1,0);
-        glRotatef(70,1.0,0,0);
-		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
-	glPopMatrix();
-
-    glPushMatrix();
-		glTranslatef(0.495f, 0.63f, 0.1f);
-        glRotatef(90,0.0,1,0);
-        glRotatef(135,1.0,0,0);
-		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
-	glPopMatrix();
-
-    glPushMatrix();
-		glTranslatef(0.495f, 0.63f, 0.1f);
-        glRotatef(90,0.0,1,0);
-        glRotatef(20,1.0,0,0);
-		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
-	glPopMatrix();
+    
 
 
     // Restore the matrix state  
