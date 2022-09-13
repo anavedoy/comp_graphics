@@ -309,22 +309,23 @@ void RenderScene(void){
 
 
     // right arm (brown)
+    glColor3f(0.0f, 0.0f, 0.0f);
     glPushMatrix();
 		glTranslatef(-0.20f, 0.98, 0.1f);
         glRotatef(-90,0.0,1,0);
         glRotatef(30,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.02f, 0.25f, 26, 13);  
-	glPopMatrix(); 
+	/*glPopMatrix(); 
 
-    glPushMatrix();
-		glTranslatef(-0.40f, 0.86, 0.1f);
-        glRotatef(-90,0.0,1,0);
-        glRotatef(-45,1.0,0,0);
+    glPushMatrix();*/
+		glTranslatef(0.0f, 0.0f, 0.25f);
+        glRotatef(-80,1,0,0);
+        //glRotatef(-45,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.02f, 0.25f, 26, 13);  
 	glPopMatrix(); 
 
     // hands (still brown)
-    glColor3f(0.2f, 0.0f, 0.0f);   
+       
 
     // // right hands
 	glPushMatrix();
@@ -332,19 +333,19 @@ void RenderScene(void){
         glRotatef(-90,0.0,1,0);
         glRotatef(-45,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
-	glPopMatrix();
+	/*glPopMatrix();
 
-    glPushMatrix();
-		glTranslatef(-0.575f, 1.0361f, 0.1f);
+    glPushMatrix();*/
+		glTranslatef(0.0f, 0.0, 0.0f);
         glRotatef(-90,0.0,1,0);
         glRotatef(-120,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
-	glPopMatrix();
+	/*glPopMatrix();
 
-    glPushMatrix();
-		glTranslatef(-0.575f, 1.0361f, 0.1f);
-        glRotatef(-90,0.0,1,0);
-        glRotatef(20,1.0,0,0);
+    glPushMatrix();*/
+		glTranslatef(0.0, 0.0f, 0.0f);
+        glRotatef(155,0.0,1,0);
+        glRotatef(-40,1.0,0,0);
 		gluCylinder(pObj, 0.02f, 0.01f, 0.06f, 26, 13);  
 	glPopMatrix();
 
