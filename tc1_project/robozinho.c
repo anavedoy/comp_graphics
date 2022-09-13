@@ -256,25 +256,14 @@ void RenderScene(void){
         
         glutSolidCylinder(0.05f, 0.25f, 26, 1);  
 
-    glPopMatrix();
-    
-    glPushMatrix(); 
-
-        glTranslatef(0.1f, 0.24f, 0.0f);
-        glRotatef(90,1, 0,  0);
-        glRotatef(45,0, 0,  1);
+        glTranslatef(0.0f, 0.0f, 0.26f);
+            glutSolidCylinder(0.05f, 0.25f, 26, 1); 
         
         glutSolidCylinder(0.05f, 0.25f, 26, 1);  
 
-    glPopMatrix();
-
-    glPushMatrix(); 
-
-        glTranslatef(0.1f, 0.02f, 0.0f);
-        glRotatef(0,1, 0,  0);
-        glRotatef(45,0, 0,  1);
-        
-        glutSolidCylinder(0.05f, 0.1f, 4, 1);  
+        glTranslatef(0.055f, 0.045f, 0.15f);
+        glRotatef(90,0, 0,  1);
+            glutSolidCylinder(0.05f, 0.1f, 4, 1);  
 
     glPopMatrix();
 
