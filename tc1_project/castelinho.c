@@ -317,6 +317,72 @@ void RenderScene(void){
                     ang = ang+20;
         glPopMatrix();
     }
+    ang = 70;
+    for(int i = 0; i<18; i++){
+        glPushMatrix();
+                    glTranslatef(-1.20, 0.45, 1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
+    ang = 70;
+    for(int i = 0; i<18; i++){
+        glPushMatrix();
+                    glTranslatef(-1.20, 0.45+0.025, 1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
+    ang = 70;
+    for(int i = 0; i<18; i++){
+        glPushMatrix();
+                    glTranslatef(1.20, 0.45, 1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
+    ang = 70;
+    for(int i = 0; i<18; i++){
+        glPushMatrix();
+                    glTranslatef(1.20, 0.45+0.025, 1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
+    ang = 70;
+    for(int i = 0; i<18; i++){
+        glPushMatrix();
+                    glTranslatef(-1.20, 0.45, -1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
+    ang = 70;
+    for(int i = 0; i<18; i++){
+        glPushMatrix();
+                    glTranslatef(-1.20, 0.45+0.025, -1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
     ang = 45;
     for(int i = 0; i<25; i++){
         glPushMatrix();
