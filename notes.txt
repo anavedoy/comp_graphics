@@ -1,0 +1,3 @@
+> luz ambiente é como se todos os objetos brilhassem 
+> normalmente é usado: ambiente+difusa(luz que quer dar a impressao de q é a unica, tem uma direçao e contrasta
+mas quem ela direciona)
