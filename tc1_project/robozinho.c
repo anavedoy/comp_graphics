@@ -109,25 +109,27 @@ void RenderScene(void){
     
     // head (white)
     glColor3f(1.0f, 1.0f, 1.0f); 	
-	glPushMatrix(); // save transform matrix state
-		glTranslatef(0.0f, 1.3f, -0.15f);
+	glPushMatrix(); 
+		glTranslatef(0.0f, 1.4f, -0.13f);
         glRotatef(45,0, 0,  1);
 		glutSolidCylinder( 0.24f, 0.3,4, 13);
-	glPopMatrix(); // restore transform matrix state
-
-	// nose (orange)
-	glColor3f(1.0f, 0.20f, 0.0f);  
-	glPushMatrix();
-		glTranslatef(0.0f, 1.3f, 0.2f);
-		gluCylinder(pObj, 0.04f, 0.0f, 0.2f, 26, 13);  
+	
 	glPopMatrix();  
+    // // pink
+    glColor3f(1.0f, 0.2f, 0.5f); 	
+	glPushMatrix(); 
+		glTranslatef(0.0f, 1.4f, -0.15f);
+        glRotatef(45,0, 0,  1);
+		glutSolidCylinder( 0.3f, 0.3,4, 13);
+	
+	glPopMatrix();
 
 
 	// eyes (black)
     glColor3f(0.0f, 0.0f, 0.0f); 
 	glPushMatrix();
         
-		glTranslatef(0.09f, 1.36f, 0.20f);
+		glTranslatef(0.09f, 1.4f, 0.17f);
 		gluSphere(pObj, 0.03f, 26, 13);  
 
 	glPopMatrix(); 
@@ -136,7 +138,7 @@ void RenderScene(void){
     glColor3f(0.0f, 0.0f, 0.0f); 
 	glPushMatrix();
         
-		glTranslatef(-0.09f, 1.36f, 0.20);
+		glTranslatef(-0.09f, 1.4f, 0.17);
 		gluSphere(pObj, 0.03f, 26, 13);  
 
 	glPopMatrix(); 
@@ -146,14 +148,14 @@ void RenderScene(void){
     glColor3f(0.2f, 0.0f, 0.0f); 
 
  	glPushMatrix();
-		glTranslatef(-0.12f, 1.4050, 0.210f);
+		glTranslatef(-0.12f, 1.5050, 0.17f);
         glRotatef(90,0.0,1,0);
         glRotatef(30,1.0,0,0);
 		gluCylinder(pObj, 0.006f, 0.005f, 0.07f, 26, 13);  
 	glPopMatrix(); 
 
     glPushMatrix();
-		glTranslatef(0.055f, 1.3685, 0.210f);
+		glTranslatef(0.055f, 1.465, 0.17f);
         glRotatef(-90,0.0,1,0);
         glRotatef(210,1.0,0,0);
 		gluCylinder(pObj, 0.005f, 0.006f, 0.07f, 26, 13);  
@@ -163,69 +165,67 @@ void RenderScene(void){
     //glColor3f(0.2f, 0.0f, 0.0f); 
 
  	glPushMatrix();
-		glTranslatef(0.0012f, 1.2, 0.240f);
+		glTranslatef(0.0012f, 1.3, 0.17f);
         glRotatef(90,0.0,1,0);
         glRotatef(210,1.0,0,0);
 		gluCylinder(pObj, 0.006f, 0.006f, 0.05f, 26, 13);  
 	glPopMatrix(); 
 
     glPushMatrix();
-		glTranslatef(0.044f, 1.225, 0.240f);
+		glTranslatef(0.044f, 1.325, 0.17f);
         glRotatef(-90,0.0,1,0);
         glRotatef(30,1.0,0,0);
 		gluCylinder(pObj, 0.006f, 0.006f, 0.05f, 26, 13);  
 	glPopMatrix();
 
 
+    // antenas
+    glColor3f(1.0f, 0.1f, 0.5f);  
+    glPushMatrix(); 
 
+        glTranslatef(-0.14f, 1.8f, 0.0f);
+        glRotatef(90,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.02f, 0.2f, 26, 1);  
+
+    glPopMatrix();
+
+    glPushMatrix(); 
+
+        glTranslatef(0.14f, 1.8f, 0.0f);
+        glRotatef(90,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.02f, 0.2f, 26, 1);  
+
+    glPopMatrix();
 
 
     // body (white)
-	glColor3f(1.0f, 1.0f, 1.0f);  
-    
+	
+    glColor3f(0.0f, 0.0f, 0.0f); 
+    glPushMatrix(); 
+
+        glTranslatef(0.0f, 1.2f, 0.0f);
+        glRotatef(90,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.08f, 0.1f, 26, 1);  
+
+    glPopMatrix();
+
+    glColor3f(1.0f, 0.2f, 0.5f); 
     // // mid section
-        glPushMatrix(); 
-
-            glTranslatef(0.0f, 0.90f, 0.0f);
-            gluSphere(pObj, 0.28f, 26, 13);
-
-        glPopMatrix(); 
-
-    
-
-
-	   
-	// bottons (black)
-    glColor3f(0.0f, 0.0f, 0.0f);
-    
-    // // mid
     glPushMatrix(); 
-		glTranslatef(0.0f, 0.984f, 0.27f);
-		gluSphere(pObj, 0.033f, 26, 13);
-	glPopMatrix();
-     
-    glPushMatrix(); 
-		glTranslatef(0.0f, 0.85f, 0.27f);
-		gluSphere(pObj, 0.033f, 26, 13);
-	glPopMatrix(); 
 
+        glTranslatef(0.0f, 1.1f, 0.0f);
+        glRotatef(90,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.3f, 0.6f, 4, 1);  
 
-
-    // scarf (red):3
-    glColor3f(1.0f, 0.0f, 0.0f);  
-	glPushMatrix();
-		glTranslatef(0.0f, 1.15, 0.0f);
-        glRotatef(90,1.0,0,0);
-		glutSolidCylinder(0.24f, 0.10f, 26, 13);  
-	glPopMatrix();  
-
-    glPushMatrix();
-        glTranslatef(-0.10f, 1.050, 0.18f);
-        glRotatef(60,1.0,0,0);
-        glutSolidCylinder(0.04f, 0.15f, 26, 13);  
     glPopMatrix(); 
-
-    
 
     // arms (brown)
     glColor3f(0.2f, 0.0f, 0.0f); 
