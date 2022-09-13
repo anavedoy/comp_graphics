@@ -183,23 +183,61 @@ void RenderScene(void){
     // portao torre entrada
     glColor3f(0.4f, 0.20f, 0.0f); 
     glPushMatrix();
-            glTranslatef(0.0f, 0.0, 1.33f);
+            glTranslatef(0.0f, 0.0, 1.37f);
             glRotatef(-90,1.0, 0,  0);
             glRotatef(45,0, 0,  1);
-            glutSolidCylinder(0.13f, 0.2f, 4, 1);  
+            glutSolidCylinder(0.06f, 0.148f, 4, 1);  
     glPopMatrix();
 
     glPushMatrix();
-            glTranslatef(0.0f, 0.0, 1.06f);
+            glTranslatef(0.0f, 0.0, 1.03f);
             glRotatef(-90,1.0, 0,  0);
             glRotatef(45,0, 0,  1);
-            glutSolidCylinder(0.13f, 0.2f, 4, 1);  
+            glutSolidCylinder(0.06f, 0.148f, 4, 1);  
     glPopMatrix();
 
 
     //janelas
+    glColor3f(0.2f, 0.0f, 0.0f);
+
+    // janela grande portao 
+
+    glPushMatrix();
+            glTranslatef(0.0f, 0.16, 1.4f);
+            glRotatef(-90,1.0, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.02f, 0.07f, 4, 1);  
+    glPopMatrix();
+
+
+
+    // // janelas grandes torre quadrada
+     
+    glPushMatrix();
+            glTranslatef(1.2f, 0.72, -1.007f);
+            glRotatef(90,1.0, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.03f, 0.1f, 4, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(1.007f, 0.50, -1.2f);
+            glRotatef(90,1.0, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.03f, 0.1f, 4, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(1.007f, 0.72, -1.2f);
+            glRotatef(90,1.0, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.03f, 0.1f, 4, 1);  
+    glPopMatrix();
+
+    // // janelas torres redondas
+
     float aux = -0.90f;
-    glColor3f(0.2f, 0.0f, 0.0f); 
+    
     for (int i=0;i<7;i++){
         glPushMatrix();
                 glTranslatef(aux, 0.2, 1.3f);
@@ -215,6 +253,25 @@ void RenderScene(void){
         glPopMatrix();
         aux = aux+0.1;
     }
+
+    aux = -0.13;
+    for (int i=0;i<5;i++){
+        glPushMatrix();
+                glTranslatef(aux, 0.35, 1.35f);
+                glRotatef(0,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        glPushMatrix();
+                glTranslatef(aux, 0.35, 1.0f);
+                glRotatef(0,1.0, 0,  0);
+                glRotatef(45,0, 0,  1);
+                glutSolidCylinder(0.02f, 0.05f, 4, 1);  
+        glPopMatrix();
+        aux = aux+0.07;
+    }
+
+
     aux = 0.27;
     for (int i=0;i<7;i++){
         glPushMatrix();
@@ -310,6 +367,39 @@ void RenderScene(void){
     for(int i = 0; i<25; i++){
         glPushMatrix();
                     glTranslatef(-1.20, 0.65, 1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
+    ang = 45;
+    for(int i = 0; i<25; i++){
+        glPushMatrix();
+                    glTranslatef(-1.20, 0.2, 1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
+    ang = 45;
+    for(int i = 0; i<25; i++){
+        glPushMatrix();
+                    glTranslatef(-1.20, 0.2, -1.2f);
+                    glRotatef(0,1.0, 0,  0);
+                    glRotatef(ang,0, 1,  0);
+                    glRotatef(45,0, 0,  1);
+                    glutSolidCylinder(0.02f, 0.25f, 4, 1);  
+                    ang = ang+20;
+        glPopMatrix();
+    }
+    ang = 45;
+    for(int i = 0; i<25; i++){
+        glPushMatrix();
+                    glTranslatef(1.20, 0.2, 1.2f);
                     glRotatef(0,1.0, 0,  0);
                     glRotatef(ang,0, 1,  0);
                     glRotatef(45,0, 0,  1);
@@ -451,14 +541,124 @@ void RenderScene(void){
     glPopMatrix();
 
     //telhas muralhas:
-    /*
+    
     glPushMatrix();
-            glTranslatef(-1.2f, 0.512, 1.2f);
+            glTranslatef(-1.2f, 0.3, 1.33f);
             glRotatef(90,0, 0,  1);
             glRotatef(90,1, 0,  0);
-            glutSolidCylinder(0.03f, 1.0f, 4, 1);  
+            glutSolidCylinder(0.05f, 1.0f, 3, 1);  
     glPopMatrix();
-    
+
+    glPushMatrix();
+            glTranslatef(-1.2f, 0.3, 1.05f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glutSolidCylinder(0.05f, 1.0f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(-1.2f, 0.23, 1.2f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.18f, 1.0f, 4, 1);  
+    glPopMatrix();
+
+    //
+
+    glPushMatrix();
+            glTranslatef(0.2f, 0.3, 1.33f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glutSolidCylinder(0.05f, 1.0f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(0.2f, 0.3, 1.05f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glutSolidCylinder(0.05f, 1.0f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(0.2f, 0.23, 1.2f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.18f, 1.0f, 4, 1);  
+    glPopMatrix();
+
+    //
+    glPushMatrix();
+            glTranslatef(-1.2f, 0.3, -1.33f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glutSolidCylinder(0.05f, 2.5f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(-1.2f, 0.3, -1.05f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glutSolidCylinder(0.05f, 2.5f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(-1.2f, 0.23, -1.2f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(90,1, 0,  0);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.18f, 2.5f, 4, 1);  
+    glPopMatrix();
+
+    //
+
+    glPushMatrix();
+            glTranslatef(-1.35f, 0.3, -1.33f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(0,1, 0,  0);
+            glutSolidCylinder(0.05f, 2.5f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(-1.06f, 0.3, -1.33f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(0,1, 0,  0);
+            glutSolidCylinder(0.05f, 2.5f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(-1.2f, 0.23, -1.2f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.18f, 2.5f, 4, 1);  
+    glPopMatrix();
+
+    //
+
+    glPushMatrix();
+            glTranslatef(1.35f, 0.3, -1.33f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(0,1, 0,  0);
+            glutSolidCylinder(0.05f, 2.5f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(1.06f, 0.3, -1.33f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(0,1, 0,  0);
+            glutSolidCylinder(0.05f, 2.5f, 3, 1);  
+    glPopMatrix();
+
+    glPushMatrix();
+            glTranslatef(1.2f, 0.23, -1.2f);
+            glRotatef(90,0, 0,  1);
+            glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.18f, 2.5f, 4, 1);  
+    glPopMatrix();
+
+
+    /*
     glColor3f(0.5f, 0.1f, 0.0f); 
     glPushMatrix();
         glTranslatef(1.2, 0.9f, -1.3);
