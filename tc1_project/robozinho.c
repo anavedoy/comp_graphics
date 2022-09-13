@@ -226,17 +226,27 @@ void RenderScene(void){
         glutSolidCylinder(0.3f, 0.6f, 4, 1);  
 
     glPopMatrix(); 
-    // legs
+    // right legs
     glColor3f(0.0f, 0.0f, 0.0f); 
     glPushMatrix(); 
 
         glTranslatef(-0.1f, 0.5f, 0.0f);
         glRotatef(90,1, 0,  0);
         glRotatef(45,0, 0,  1);
+            glutSolidCylinder(0.05f, 0.25f, 26, 1);  
+
+        glTranslatef(0.0f, 0.0f, 0.26f);
+            glutSolidCylinder(0.05f, 0.25f, 26, 1);  
         
-        glutSolidCylinder(0.05f, 0.25f, 26, 1);  
+        //foot
+        glTranslatef(0.055f, 0.045f, 0.15f);
+        glRotatef(90,0, 0,  1);
+            glutSolidCylinder(0.05f, 0.1f, 4, 1);  
 
     glPopMatrix();
+
+    //left legs
+
 
     glPushMatrix(); 
 
@@ -247,18 +257,7 @@ void RenderScene(void){
         glutSolidCylinder(0.05f, 0.25f, 26, 1);  
 
     glPopMatrix();
-    //
-    glColor3f(0.0f, 0.0f, 0.0f); 
-    glPushMatrix(); 
-
-        glTranslatef(-0.1f, 0.24f, 0.0f);
-        glRotatef(90,1, 0,  0);
-        glRotatef(45,0, 0,  1);
-        
-        glutSolidCylinder(0.05f, 0.25f, 26, 1);  
-
-    glPopMatrix();
-
+    
     glPushMatrix(); 
 
         glTranslatef(0.1f, 0.24f, 0.0f);
@@ -268,7 +267,7 @@ void RenderScene(void){
         glutSolidCylinder(0.05f, 0.25f, 26, 1);  
 
     glPopMatrix();
-    //feet
+
     glPushMatrix(); 
 
         glTranslatef(0.1f, 0.02f, 0.0f);
@@ -279,15 +278,6 @@ void RenderScene(void){
 
     glPopMatrix();
 
-    glPushMatrix(); 
-
-        glTranslatef(-0.1f, 0.02f, 0.0f);
-        glRotatef(0,1, 0,  0);
-        glRotatef(45,0, 0,  1);
-        
-        glutSolidCylinder(0.05f, 0.1f, 4, 1);  
-
-    glPopMatrix();
 
     // arms (brown)
     glColor3f(0.0f, 0.0f, 0.0f); 
