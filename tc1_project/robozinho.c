@@ -202,8 +202,8 @@ void RenderScene(void){
     glPopMatrix();
 
 
-    // body (white)
-	
+    // body (black)
+	// // pescoço
     glColor3f(0.0f, 0.0f, 0.0f); 
     glPushMatrix(); 
 
@@ -226,9 +226,71 @@ void RenderScene(void){
         glutSolidCylinder(0.3f, 0.6f, 4, 1);  
 
     glPopMatrix(); 
+    // legs
+    glColor3f(0.0f, 0.0f, 0.0f); 
+    glPushMatrix(); 
+
+        glTranslatef(-0.1f, 0.5f, 0.0f);
+        glRotatef(90,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.05f, 0.25f, 26, 1);  
+
+    glPopMatrix();
+
+    glPushMatrix(); 
+
+        glTranslatef(0.1f, 0.5f, 0.0f);
+        glRotatef(90,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.05f, 0.25f, 26, 1);  
+
+    glPopMatrix();
+    //
+    glColor3f(0.0f, 0.0f, 0.0f); 
+    glPushMatrix(); 
+
+        glTranslatef(-0.1f, 0.24f, 0.0f);
+        glRotatef(90,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.05f, 0.25f, 26, 1);  
+
+    glPopMatrix();
+
+    glPushMatrix(); 
+
+        glTranslatef(0.1f, 0.24f, 0.0f);
+        glRotatef(90,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.05f, 0.25f, 26, 1);  
+
+    glPopMatrix();
+    //feet
+    glPushMatrix(); 
+
+        glTranslatef(0.1f, 0.02f, 0.0f);
+        glRotatef(0,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.05f, 0.1f, 4, 1);  
+
+    glPopMatrix();
+
+    glPushMatrix(); 
+
+        glTranslatef(-0.1f, 0.02f, 0.0f);
+        glRotatef(0,1, 0,  0);
+        glRotatef(45,0, 0,  1);
+        
+        glutSolidCylinder(0.05f, 0.1f, 4, 1);  
+
+    glPopMatrix();
 
     // arms (brown)
-    glColor3f(0.2f, 0.0f, 0.0f); 
+    glColor3f(0.0f, 0.0f, 0.0f); 
 
     // // left arm 
  	glPushMatrix();
