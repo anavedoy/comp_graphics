@@ -8,3 +8,14 @@ mas quem ela direciona)
 >cores do objeto resultado de uma formula que calcula as variaveis de cor rgb do proprio objeto e as fontes de luz
 inseridas nele.
 
+20 de setembro de 2022 - dia do gaucho dale é os guri
+
+modelos de iluminação
+    descrevem como a luz:
+    > interage
+    > é transportada
+
+iluminação local:
+    > independe da energia recebida indiretamente
+    > toda info necessaria esta no local
+    > parcela ambiente simula este efeito
