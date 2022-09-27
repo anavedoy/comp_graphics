@@ -75,7 +75,7 @@ void DrawGLScene()
   int i, ative_particles=0;
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);		// Clear The Screen And The Depth Buffer
   glLoadIdentity();				// Reset The View
-
+  glColor3f(0.9f, 0.1f, 0.1f); 
   glTranslatef(0.0f,0.0f,-6.0f);		// Move particles 6.0 units into the screen
 	
   glBegin(GL_POINTS);
