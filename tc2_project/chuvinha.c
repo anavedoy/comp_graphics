@@ -87,8 +87,10 @@ void DrawGLScene()
       particles[i].y += particles[i].veloc_y;
       
       for(int j=0;j<5;j++){
-        glVertex3f( particles[i].x, particles[i].y, 0.0f); // draw pixel
-        glVertex3f( particles[i].x-j, particles[i].y, 0.0f); // draw pixel
+        glVertex3f( particles[i].x, particles[i].y, 1.0f); // draw pixel
+        glVertex3f( particles[i].x-j, particles[i].y, 1.0f); // draw pixel
+        glVertex3f( particles[i].x+j, particles[i].y, 1.0f); // draw pixel
+
       }
       
     }
