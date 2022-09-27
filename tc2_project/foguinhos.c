@@ -28,7 +28,7 @@ void InitParticle(int pause)
     int angle = rand() % (20000);
     particles[i].veloc_x = cos(M_PI * angle/10000) * velocity;
     particles[i].veloc_y = (M_PI * angle/180) * velocity;
-    particles[i].x = -4 ;
+    particles[i].x = 0;
     particles[i].y = 4 ;
     particles[i].lifetime = rand() % 1000;
   }
@@ -86,8 +86,11 @@ void DrawGLScene()
       particles[i].x += particles[i].veloc_x;
       particles[i].y += particles[i].veloc_y;
       
-
-      glVertex3f( particles[i].x, particles[i].y, 0.0f); // draw pixel
+      for(int j=0;j<5;j++){
+        glVertex3f( particles[i].x, particles[i].y, 0.0f); // draw pixel
+        glVertex3f( particles[i].x-j, particles[i].y, 0.0f); // draw pixel
+      }
+      
     }
 
   
