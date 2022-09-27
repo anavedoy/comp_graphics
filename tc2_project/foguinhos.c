@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 #define ESCAPE 27
-#define NUM_PARTICLES 3000
+#define NUM_PARTICLES 100000
 #define GRAVITY 0.0003
 
 struct s_pf {
@@ -21,16 +21,16 @@ void InitParticle(int pause)
 {
   int i;
 
-  if(pause) usleep(200000 + rand() % 2000000);
+  if(pause) usleep(20000+ rand() % 20000);
 
   for(i=0;i<NUM_PARTICLES;i++) {
     float velocity = (float)(rand() % 100)/5000.0;
-    int angle = rand() % 360;
-    particles[i].veloc_x = cos( (M_PI * angle/180.0) ) * velocity;
-    particles[i].veloc_y = sin( (M_PI * angle/180.0) ) * velocity;
-    particles[i].x = 0.0;
-    particles[i].y = 0.0;
-    particles[i].lifetime = rand() % 100;
+    int angle = rand() % (20000);
+    particles[i].veloc_x = cos(M_PI * angle/10000) * velocity;
+    particles[i].veloc_y = (M_PI * angle/180) * velocity;
+    particles[i].x = -4 ;
+    particles[i].y = 4 ;
+    particles[i].lifetime = rand() % 1000;
   }
 }
 
@@ -42,6 +42,7 @@ void InitGL(int Width, int Height)
   glDepthFunc(GL_LESS);				// The Type Of Depth Test To Do
   glEnable(GL_DEPTH_TEST);			// Enables Depth Testing
   glShadeModel(GL_SMOOTH);			// Enables Smooth Color Shading
+
 
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();				// Reset The Projection Matrix
@@ -84,16 +85,18 @@ void DrawGLScene()
       particles[i].veloc_y -= GRAVITY;
       particles[i].x += particles[i].veloc_x;
       particles[i].y += particles[i].veloc_y;
-      particles[i].lifetime--;
+      
 
       glVertex3f( particles[i].x, particles[i].y, 0.0f); // draw pixel
     }
+
+  
   }
   glEnd();
 
   // swap buffers to display, since we're double buffered.
   glutSwapBuffers();
-  usleep(20000);
+  usleep(2000);
 
   if(!ative_particles) InitParticle(1); // reset particles
 }
@@ -116,7 +119,7 @@ int main(int argc, char **argv)
   glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH);  
   glutInitWindowSize(640, 480);  
   glutInitWindowPosition(0, 0);  
-  window = glutCreateWindow("Fogos de artificio");  
+  window = glutCreateWindow("Chuva");  
   glutDisplayFunc(&DrawGLScene);  
   glutFullScreen();
   glutIdleFunc(&DrawGLScene);

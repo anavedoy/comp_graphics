@@ -19,3 +19,6 @@ iluminação local:
     > independe da energia recebida indiretamente
     > toda info necessaria esta no local
     > parcela ambiente simula este efeito
+
+
+trabalho complementar animação: ou use o q usou em particulas ou o robo humanoide
