@@ -22,3 +22,9 @@ iluminação local:
 
 
 trabalho complementar animação: ou use o q usou em particulas ou o robo humanoide
+
+
+
+27/09/2022
+TEXTURAS
+    > how to do textures? [meudeus como ele fez o role tao em alta definição? que lib usou?]
